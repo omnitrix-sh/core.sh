@@ -36,6 +36,7 @@ Thumbs.db
 
 # Documentation (reference only, not in repo)
 *.md
+!README.md
 
 # Config with secrets
 .omnitrix.local.json
