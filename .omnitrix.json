@@ -1,0 +1,62 @@
+{
+  "data_dir": "~/.local/share/omnitrix",
+  "context_paths": [
+    ".cursorrules",
+    ".github/copilot-instructions.md",
+    "omnitrix.md",
+    "OMNITRIX.md"
+  ],
+  "providers": {
+    "ollama": {
+      "enabled": true,
+      "base_url": "http://localhost:11434",
+      "models": [
+        "deepseek-coder:33b",
+        "qwen2.5-coder:32b",
+        "codellama:34b",
+        "deepseek-coder:6.7b",
+        "qwen2.5-coder:7b"
+      ]
+    },
+    "huggingface": {
+      "enabled": true,
+      "base_url": "https://api-inference.huggingface.co/models",
+      "api_key": "",
+      "models": [
+        "deepseek-ai/DeepSeek-Coder-V2-Instruct",
+        "Qwen/Qwen2.5-Coder-32B-Instruct",
+        "codellama/CodeLlama-34b-Instruct-hf",
+        "deepseek-ai/deepseek-coder-33b-instruct"
+      ]
+    },
+    "vllm": {
+      "enabled": false,
+      "base_url": "http://localhost:8000",
+      "models": []
+    }
+  },
+  "default_model": "deepseek-coder:33b",
+  "lsp": {
+    "gopls": {
+      "command": "gopls",
+      "args": ["serve"],
+      "enabled": true
+    },
+    "typescript": {
+      "command": "typescript-language-server",
+      "args": ["--stdio"],
+      "enabled": true
+    },
+    "python": {
+      "command": "pyright-langserver",
+      "args": ["--stdio"],
+      "enabled": true
+    },
+    "rust": {
+      "command": "rust-analyzer",
+      "args": [],
+      "enabled": true
+    }
+  },
+  "debug": false
+}
