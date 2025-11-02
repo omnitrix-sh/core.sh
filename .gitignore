@@ -39,5 +39,6 @@ Thumbs.db
 !README.md
 
 # Config with secrets
+.env
 .omnitrix.local.json
 config.local.json

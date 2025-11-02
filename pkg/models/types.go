@@ -33,15 +33,16 @@ type Capabilities struct {
 
 // Message represents a conversation message
 type Message struct {
-	ID        string       `json:"id"`
-	SessionID string       `json:"session_id"`
-	Role      Role         `json:"role"`
-	Content   string       `json:"content"`
-	Parts     []ContentPart `json:"parts,omitempty"`
-	ToolCalls []ToolCall   `json:"tool_calls,omitempty"`
-	Model     string       `json:"model,omitempty"`
-	CreatedAt time.Time    `json:"created_at"`
-	UpdatedAt time.Time    `json:"updated_at"`
+	ID         string       `json:"id"`
+	SessionID  string       `json:"session_id"`
+	Role       Role         `json:"role"`
+	Content    string       `json:"content"`
+	Parts      []ContentPart `json:"parts,omitempty"`
+	ToolCalls  []ToolCall   `json:"tool_calls,omitempty"`
+	ToolCallID string       `json:"tool_call_id,omitempty"`
+	Model      string       `json:"model,omitempty"`
+	CreatedAt  time.Time    `json:"created_at"`
+	UpdatedAt  time.Time    `json:"updated_at"`
 }
 
 // Role in conversation
@@ -184,6 +185,9 @@ type Config struct {
 
 	// Default model
 	DefaultModel string `json:"default_model"`
+	
+	// Default provider
+	DefaultProvider string `json:"default_provider"`
 
 	// LSP configurations
 	LSP map[string]LSPConfig `json:"lsp"`
