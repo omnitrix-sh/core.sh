@@ -1,0 +1,42 @@
+# Binaries
+omnitrix
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output
+*.out
+
+# Go workspace file
+go.work
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data directories
+.omnitrix/
+*.db
+*.db-shm
+*.db-wal
+
+# Logs
+*.log
+
+# Documentation (reference only, not in repo)
+*.md
+
+# Config with secrets
+.omnitrix.local.json
+config.local.json
