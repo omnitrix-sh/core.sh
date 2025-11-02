@@ -35,7 +35,8 @@
       "models": []
     }
   },
-  "default_model": "deepseek-coder:33b",
+  "default_model": "gpt-4o-mini",
+  "default_provider": "openai",
   "lsp": {
     "gopls": {
       "command": "gopls",
